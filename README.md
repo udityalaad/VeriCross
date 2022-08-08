@@ -39,8 +39,21 @@ https://github.com/othneildrew/Best-README-Template -->
 <!-- ABOUT THE PROJECT -->
 ## About The Project
   *	VeriCross is a custom Program Verification Engine to prove correctness using specifications & constructs like loop invariants.
-  *	The tool makes deductive analysis possible with over pinpoint accuracy.
+  *	The tool makes deductive analysis possible with pinpoint accuracy.
 
+
+  #### A loop construct in WLang is verified by reducing it as follows:
+  Example: <b>'while <i>b</i> inv <i>inv</i> do <i>s</i>'</b>, can be reduced to:
+    
+    assert inv;
+    havoc V;
+    assume inv;
+    if b then {
+      s;
+      assert inv;
+      assume false
+    }
+    
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Built With
@@ -70,8 +83,8 @@ https://github.com/othneildrew/Best-README-Template -->
 
 <!-- Sample Runs -->
 ## Sample Runs
-  * We tried VeriCross on some interesting programs. And it was able to successfully verify all the them.
-  * All the tries test cases and programs can be found in:
+  * We tried VeriCross on some interesting programs. And it was able to successfully verify all of them.
+  * All the tried test cases and programs can be found in:
     1. 'wlang/q4b.prg'
     2. 'wlang/q4d.prg'
     3. 'wlang/test_sym.py'
@@ -85,7 +98,8 @@ https://github.com/othneildrew/Best-README-Template -->
 
 <!-- LICENSE -->
 ## License or Author
-  * Uditya Laad - (University of Waterloo)
+  * <b>Authored by:</b> &nbsp; Uditya Laad, University of Waterloo
+  * <b>WLang Structure</b> - &nbsp; Provided by Prof. Arie Gurfinkel, University of Waterloo, Waterloo, ON, CA
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,6 +121,6 @@ https://github.com/othneildrew/Best-README-Template -->
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-  * ECE 653 - Assignment 3, Prof. Arie Gurfinkel, Prof. Patrick Lam, University of Waterloo
+  * ECE 653 - Assignment 3, Prof. Arie Gurfinkel, Prof. Patrick Lam - University of Waterloo, Waterloo, ON, CA
 
   <p align="right">(<a href="#readme-top">back to top</a>)</p>
